@@ -1,3 +1,46 @@
-$primary-color: color("brown", "darken-2") !default;
-$secondary-color: color("purple", "darken-2") !default;
-$card-link-color: color("purple", "accent-3") !default;
+
+@import "node_modules/materialize-css/sass/materialize";
+
+$primary-color: color(#FFFFFF) !default;
+$secondary-color: color(#0F0F0F) !default;
+$card-link-color: color(#999999) !default;
+
+main { padding-top: 40px; };
+body { background-color: #f1f1ff; }
+.page-footer { margin-top: 100px; }
+
+.cards-container {
+    .card {
+        display: inline-block;
+        overflow: visible;
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .cards-container {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+}
+@media only screen and (min-width: 601px) {
+    .cards-container {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}
+@media only screen and (min-width: 993px) {
+    .cards-container {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .cards-container {
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
+        column-count: 4;
+    }
+}
