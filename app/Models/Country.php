@@ -2,6 +2,9 @@
 
 namespace App;
 
+use App\Models\Address;
+use App\Models\OrderAddress;
+use App\Models\Range;
 use Illuminate\Database\Eloquent\Model;
 
 class Country extends Model
@@ -16,4 +19,18 @@ class Country extends Model
     ];
 
     public $timestamps = false;
+
+    public function ranges()
+    {
+        return $this->belongsToMany(Range::class, 'colissimos')->withPivot('id', 'price');
+    }
+    public function addresses()
+    {
+        return $this->hasMany(Address::class);
+    }
+    public function order_addresses()
+    {
+        return $this->hasMany(OrderAddress::class);
+    }
+
 }

@@ -12,4 +12,9 @@ class State extends Model
         'color',
         'indice',
     ];
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
 }
