@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ecf4a5cb-107b-4413-909e-35406dcf199e" name="Default Changelist" comment="" />
+    <list default="true" id="ecf4a5cb-107b-4413-909e-35406dcf199e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -118,6 +124,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1hdfy5XsUb3dLQyzdM3DRDoTF5h" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -126,7 +133,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Models" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -142,7 +155,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600346140628</updated>
-      <workItem from="1600346141643" duration="49000" />
+      <workItem from="1600346141643" duration="1526000" />
     </task>
     <servers />
   </component>
@@ -154,5 +167,21 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2653" y="418" width="444" height="242" key="#Composer/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1600346190445" />
+    <state x="2683" y="315" width="374" height="447" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1600347141446">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2683" y="315" width="374" height="447" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1600347141446" />
+    <state x="2685" y="439" key="Github.ShareDialog" timestamp="1600346223339">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2685" y="439" key="Github.ShareDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1600346223339" />
+    <state x="2606" y="226" width="537" height="626" key="Github.UntrackedFilesDialog" timestamp="1600346230247">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2606" y="226" width="537" height="626" key="Github.UntrackedFilesDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1600346230247" />
+    <state x="2675" y="464" width="399" height="149" key="NewPhpFileDialog" timestamp="1600347336032">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2675" y="464" width="399" height="149" key="NewPhpFileDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1600347336032" />
   </component>
 </project>
