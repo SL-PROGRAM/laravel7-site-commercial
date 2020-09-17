@@ -149,7 +149,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600346140628</updated>
-      <workItem from="1600346141643" duration="3557000" />
+      <workItem from="1600346141643" duration="3894000" />
     </task>
     <task id="LOCAL-00001" summary="Creation User">
       <created>1600347707068</created>
@@ -221,7 +221,35 @@
       <option name="project" value="LOCAL" />
       <updated>1600349596580</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="creation model range">
+      <created>1600349729696</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1600349729696</updated>
+    </task>
+    <task id="LOCAL-00012" summary="creation model colissimo">
+      <created>1600349764622</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1600349764622</updated>
+    </task>
+    <task id="LOCAL-00013" summary="creation model shop">
+      <created>1600349908670</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1600349908670</updated>
+    </task>
+    <task id="LOCAL-00014" summary="creation model Page">
+      <created>1600349992999</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1600349992999</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,7 +265,11 @@
     <MESSAGE value="creation model order" />
     <MESSAGE value="creation model orderAddress" />
     <MESSAGE value="creation model orderProduct" />
-    <option name="LAST_COMMIT_MESSAGE" value="creation model orderProduct" />
+    <MESSAGE value="creation model range" />
+    <MESSAGE value="creation model colissimo" />
+    <MESSAGE value="creation model shop" />
+    <MESSAGE value="creation model Page" />
+    <option name="LAST_COMMIT_MESSAGE" value="creation model Page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2653" y="418" width="444" height="242" key="#Composer" timestamp="1600346190445">
@@ -248,10 +280,10 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2683" y="315" width="374" height="447" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1600347141446" />
-    <state x="2419" y="87" width="912" height="904" key="CommitChangelistDialog2" timestamp="1600349596544">
+    <state x="2419" y="87" width="912" height="904" key="CommitChangelistDialog2" timestamp="1600349992953">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state x="2419" y="87" width="912" height="904" key="CommitChangelistDialog2/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1600349596544" />
+    <state x="2419" y="87" width="912" height="904" key="CommitChangelistDialog2/67.27.1853.1053/1920.0.1920.1080@1920.0.1920.1080" timestamp="1600349992953" />
     <state x="2663" y="297" width="424" height="484" key="FileChooserDialogImpl" timestamp="1600348662428">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
