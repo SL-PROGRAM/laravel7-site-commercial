@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Country;
+use App\Models\Country;
 use Illuminate\Database\Eloquent\Model;
 
 class Address extends Model
