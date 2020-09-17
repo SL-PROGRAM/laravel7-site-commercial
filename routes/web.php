@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function () {
+    return view('home');
+});
 
 Route::post('deconnexion', 'Auth\LoginController@logout')->name('logout');
 Route::middleware('guest')->group(function () {
@@ -32,3 +35,5 @@ Route::prefix('passe')->group(function () {
     Route::post('renouvellement', 'Auth\ResetPasswordController@reset')->name('password.update');
 });
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
+Route::name('products.show')->get('products/{product}', 'ProductController');

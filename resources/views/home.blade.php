@@ -8,10 +8,10 @@
                     <div class="card">
                         <div class="card-image">
                             @if($product->quantity)
-                                <a href="#">
-                                    @endif
-                                    <img src="/images/thumbs/{{ $product->image }}">
-                                    @if($product->quantity) </a> @endif
+                                <a href="{{ route('products.show', $product->id) }}">
+                            @endif
+                                <img src="/images/thumbs/{{ $product->image }}">
+                            @if($product->quantity) </a> @endif
                         </div>
                         <div class="card-content center-align">
                             <p>{{ $product->name }}</p>
