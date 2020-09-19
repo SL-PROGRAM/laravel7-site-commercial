@@ -37,3 +37,4 @@ Route::prefix('passe')->group(function () {
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::name('products.show')->get('products/{product}', 'ProductController');
+Route::resource('panier', 'CartController')->only(['index', 'store', 'update', 'destroy']);
