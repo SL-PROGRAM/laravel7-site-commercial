@@ -5,12 +5,12 @@
         <div class="row">
             <div class="col s12 cards-container">
                 @foreach($products as $product)
+                    @if($product->quantity)
+                        <a href="{{ route('products.show', $product->id) }}">
+                    @endif
                     <div class="card">
                         <div class="card-image">
-                            @if($product->quantity)
-                                <a href="{{ route('products.show', $product->id) }}">
-                            @endif
-                                <img src="/images/thumbs/{{ $product->image }}">
+                            <img src="/images/thumbs/{{ $product->image }}">
                             @if($product->quantity) </a> @endif
                         </div>
                         <div class="card-content center-align">

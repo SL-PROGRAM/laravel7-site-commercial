@@ -18,13 +18,15 @@ class ProductController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Product  $product
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param Product $produit
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
      */
-    public function __invoke(Request $request, Product $produit)
+    public function __invoke(Request $request, Product $product)
     {
-        if($produit->active || $request->user()->admin) {
-            return view('products.show', compact('produit'));
+        if($product->active || $request->user()->admin) {
+
+            return view('products.show', compact('product'));
         }
         return redirect(route('home'));
     }
