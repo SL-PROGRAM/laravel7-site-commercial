@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Cart;
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -31,5 +32,10 @@ class AppServiceProvider extends ServiceProvider
                 'cartTotal' => Cart::getTotal(),
             ]);
         });
+
+        Route::resourceVerbs([
+            'edit' => 'modification',
+            'create' => 'creation',
+        ]);
     }
 }

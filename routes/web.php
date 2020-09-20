@@ -28,13 +28,28 @@ Route::middleware('guest')->group(function () {
         Route::post('/', 'Auth\RegisterController@register');
     });
 });
+
+
 Route::prefix('passe')->group(function () {
     Route::get('renouvellement', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
     Route::post('email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
     Route::get('renouvellement/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
     Route::post('renouvellement', 'Auth\ResetPasswordController@reset')->name('password.update');
 });
+
+
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::name('products.show')->get('products/{product}', 'ProductController');
 Route::resource('panier', 'CartController')->only(['index', 'store', 'update', 'destroy']);
+
+// Utilisateur authentifié
+Route::middleware('auth')->group(function () {
+    // Commandes
+    Route::prefix('commandes')->group(function () {
+        Route::resource('/', 'OrderController')->names([
+            'create' => 'commandes.create',
+            'store' => 'commandes.store',
+        ])->only(['create', 'store']);
+    });
+});
