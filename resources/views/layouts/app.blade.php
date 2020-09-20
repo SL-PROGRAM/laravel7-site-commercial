@@ -1,6 +1,16 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
@@ -26,8 +36,13 @@
         <a href="{{ route('home') }}" data-target="mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
         <ul class="right hide-on-med-and-down">
+            @if($cartCount)
+                <li>
+                    <a class="tooltipped" href="{{ route('panier.index') }}" data-position="bottom" data-tooltip="Voir mon panier"><i class="material-icons left">shopping_cart</i>Panier({{ $cartCount }})</a>
+                </li>
+            @endif
             @guest
-                <li><a href="{{ route('login') }}"><i class="material-icons left">perm_identity</i>Connexion</a></li>
+            <li><a href="{{ route('login') }}"><i class="material-icons left">perm_identity</i>Connexion</a></li>
             @else
                 <li><a href="{{ route('logout') }}"
                        onclick="event.preventDefault();
@@ -41,6 +56,11 @@
     </div>
 </nav>
 <ul class="sidenav" id="mobile">
+    @if($cartCount)
+        <li>
+            <a class="tooltipped" href="{{ route('panier.index') }}" data-position="bottom" data-tooltip="Voir mon panier">Panier({{ $cartCount }})</a>
+        </li>
+    @endif
     @guest
         <li><a href="{{ route('login') }}">Connexion</a></li>
     @else
@@ -80,5 +100,6 @@
     </div>
 </footer>
 @yield('javascript')
+
 </body>
 </html>

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
+use Cart;
 use Illuminate\Http\Request;
 
 class CartController extends Controller
@@ -13,7 +15,9 @@ class CartController extends Controller
      */
     public function index()
     {
-        //
+        $content = Cart::getContent();
+        $total = Cart::getTotal();
+        return view('cart.index', compact('content', 'total'));
     }
 
     /**
@@ -29,12 +33,24 @@ class CartController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     * @throws \Darryldecode\Cart\Exceptions\InvalidItemException
      */
     public function store(Request $request)
     {
-        //
+        $product = Product::findOrFail($request->id);
+
+        Cart::add([
+                'id' => $product->id,
+                'name' => $product->name,
+                'price' => $product->price,
+                'quantity' => $request->quantity,
+                'attributes' => [],
+                'associatedModel' => $product,
+            ]
+        );
+        return redirect()->back()->with('cart', 'ok');
     }
 
     /**
@@ -68,7 +84,10 @@ class CartController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Cart::update($id, [
+            'quantity' => ['relative' => false, 'value' => $request->quantity],
+        ]);
+        return redirect(route('panier.index'));
     }
 
     /**
@@ -79,6 +98,7 @@ class CartController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Cart::remove($id);
+        return redirect(route('panier.index'));
     }
 }
