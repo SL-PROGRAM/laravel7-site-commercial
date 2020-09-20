@@ -8,15 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     protected $fillable = [
-      'reference',
-      'shipping',
-      'total',
-      'tax',
-      'payment',
-      'purchase_order',
-      'pick',
-
+        'shipping', 'tax', 'user_id', 'state_id', 'payment', 'reference', 'pick', 'total',
     ];
+
 
     public function adresses()
     {
