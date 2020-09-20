@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Shop;
 use Cart;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\View;
@@ -26,6 +27,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        View::share('shop', Shop::firstOrFail());
         View::composer(['layouts.app', 'products.show'], function ($view) {
             $view->with([
                 'cartCount' => Cart::getTotalQuantity(),
